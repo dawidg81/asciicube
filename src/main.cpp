@@ -18,7 +18,7 @@ int main(){
 				<< "                     If address is not given, starts a new multiplayer game with operator status.\n"
 				<< "list - connects to a server that sends a list of currently online peer-nets.\n"
 				<< "about - Shows more information about this program.\n"
-				<< "quit - gracefully quits the program.\n\n";
+				<< "quit - gracefully quits the program. (Alias: exit)\n\n";
 		} else if(input == "about"){
 			cout << "This is AsciiCube v0.0.0 made in Poland by dawidg81 on 2025-12-07 (YYYY-MM-DD).\n"
 				<< "Inspiration from ClassiCube.\n"
@@ -27,7 +27,7 @@ int main(){
 				<< "You will find WAY more information in this wiki:\n"
 				<< "    http://ludinko23.duckdns.org/wiki"
 				<< "                           (in courtesy of Ludinko23).\n\n";
-		} else if(input == "quit"){
+		} else if(input == "quit" || input == "exit"){
 			cout << "Bye!\n";
 			return 0;
 		} else {
