@@ -8,5 +8,5 @@ or ClassiCube.
 
 This game will most likely not support Classic Server Protocol including
 Classic Protocol Extension due to its old and complicated data receiving
-system. The game will be built mostly as a multiplayer game running on
-peer-to-peer network instead of server-client network.
+system. The game will be built mostly as a multiplayer game running on a
+server-client network.
