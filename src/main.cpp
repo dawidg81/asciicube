@@ -20,7 +20,13 @@ int main(){
 				<< "about - Shows more information about this program.\n"
 				<< "quit - gracefully quits the program.\n\n";
 		} else if(input == "about"){
-			cout << "This is AsciiCube v0.0.0 made in Poland by dawidg81 on 2025-12-07 (YYYY-MM-DD).\n";
+			cout << "This is AsciiCube v0.0.0 made in Poland by dawidg81 on 2025-12-07 (YYYY-MM-DD).\n"
+				<< "Inspiration from ClassiCube.\n"
+				<< "Peer-to-peer network is different that server-client network. In peer-to-peer networking you are connecting to other 'client'\n"
+				<< "having the same privileges in the network meaning (this game will support in-game operators).\n\n"
+				<< "You will find WAY more information in this wiki:\n"
+				<< "    http://ludinko23.duckdns.org/wiki"
+				<< "                           (in courtesy of Ludinko23).\n\n";
 		} else if(input == "quit"){
 			cout << "Bye!\n";
 			return 0;
