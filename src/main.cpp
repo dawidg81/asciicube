@@ -18,7 +18,7 @@ int main(){
 				<< "                     If address is not given, starts a new multiplayer game with operator status.\n"
 				<< "list - connects to a server that sends a list of currently online peer-nets.\n"
 				<< "about - Shows more information about this program.\n"
-				<< "quit - gracefully quits the program.";
+				<< "quit - gracefully quits the program.\n";
 		} else if(input == "about"){
 			cout << "This is AsciiCube v0.0.0 made in Poland by dawidg81 on 2025-12-07 (YYYY-MM-DD).\n";
 		} else if(input == "quit"){
