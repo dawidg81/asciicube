@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-	cout << "Merry Christmas! Welcome to AsciiCube.\n"
+	cout << "Welcome to AsciiCube.\n"
 		<< "Type 'help' for more information.\n\n";
 
 	while(true){
@@ -13,10 +13,9 @@ int main(){
 
 		if(input == "help"){
 			cout << "Hello, this is help. I will give you commands.\n\n"
-				<< "play [address] - directly connects to a server.\n"
-				<< "list - shows an external list of on-line servers.\n"
-				<< "about - Shows more information about this program.\n"
-				<< "quit - gracefully quits the program. (Alias: exit)\n\n";
+				"help - shows list of commands and shortly describes them.\n"
+				"about - Shows more information about this program.\n"
+				"quit - gracefully quits the program. (Alias: exit)\n\n";
 		} else if(input == "about"){
 			cout << "This is AsciiCube v0.0.0 made in Poland by dawidg81 on 2025-12-07 (YYYY-MM-DD).\n"
 				<< "Inspiration from ClassiCube.\n\n"
