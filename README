@@ -1,12 +1,1 @@
-AsciiCube is a Minecraft Classic/ClassiCube-like game for voxel rendering.
-It is a next project after Voxelint. Voxelint development has been paused
-because developer gave up. Any help to Voxeling as well as AsciiCube
-would be higly appreciated.
-
-This project is independent and not affilated in any way with Mojang
-or ClassiCube.
-
-This game will most likely not support Classic Server Protocol including
-Classic Protocol Extension due to its old and complicated data receiving
-system. The game will be built mostly as a multiplayer game running on a
-server-client network.
+asciicube is a Minecraft Classic-like game but in twodimensional view in terminal.
