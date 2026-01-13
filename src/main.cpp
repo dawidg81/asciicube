@@ -73,6 +73,7 @@ int game(){
 	// Drawing onto the screen
 	while(inGame){
 		system("clear");
+
 		if(playerX >= 0 && playerX < screenHeight && playerZ >= 0 && playerZ < screenWidth){
 			screen[playerZ][playerX] = player;
 		}
@@ -88,20 +89,30 @@ int game(){
 			putchar('\n');
 		}
 
-		char in;
-		cout << "Input: ";
+		string in;
+		cout << "[@]> ";
 		cin >> in;
 		
-		if(in == 'W' || in == 'w'){
+		// player
+		if(in == "w"){
 			playerX--;
-		} else if(in == 'S' || in == 's'){
+		} else if(in == "s"){
 			playerX++;
-		} else if(in == 'A' || in == 'a'){
+		} else if(in == "a"){
 			playerZ--;
-		} else if(in == 'D' || in == 'd'){
+		} else if(in == "d"){
 			playerZ++;
-		} else if(in == 'q'){
+		} else if(in == "q"){
 			inGame = false;
+		// cursor
+		} else if(in == "h"){
+			cursorX--;
+		} else if(in == "j"){
+			cursorX++;
+		} else if(in == "k"){
+			playerZ--;
+		} else if(in == "l"){
+			playerZ++;
 		}
 	}
 
@@ -110,7 +121,7 @@ int game(){
 
 int main(){
 	cout << "Welcome to AsciiCube.\n"
-		<< "Type 'help' for more information.\n\n";
+		<< "Type 'help' or read README.txt file (should be included with the installation) for more information.\n\n";
 
 	while(true){
 		string input;
