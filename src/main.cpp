@@ -127,7 +127,7 @@ int game(){
 		} else if(in == "ce"){
 			cursorRelY++;
 		} else if(in == "cq"){
-			cursolRelY--;
+			cursorRelY--;
 		}
 	}
 
