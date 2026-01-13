@@ -24,6 +24,16 @@ int game(){
 	int levelZ = 16;
 	int levelArray[levelX][levelY][levelZ];
 
+	int playerX = levelX / 2;
+	int playerY = levelY;
+	int playerZ = levelZ / 2;
+	char player = '@';
+
+	int cursorX = playerX;
+	int cursorY = playerY;
+	int cursorZ = playerZ;
+	char cursor = 'X';
+
 	// Drawing blocks into level array
 	for(int x = 0; x < levelX; x++){
 		for(int y = 0; y < levelY; y++){
@@ -60,8 +70,13 @@ int game(){
 		}
 	}
 
+	if(playerX >= 0 && playerX < screenHeight && playerZ >= 0 && playerZ < screenWidth){
+		screen[playerZ][playerX] = player;
+	}
+
 	// Drawing onto the screen
 	while(inGame){
+		system("clear");
 		for(int y = 0; y  < screenHeight; y++){
 			for(int x = 0; x < screenWidth; x++){
 				putchar(screen[x][y]);
