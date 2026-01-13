@@ -30,12 +30,12 @@ int game(){
 	char player = '@';
 
 
-	int cursorRelX = 0;
-	int cursorRelY = 0;
-	int cursorRelZ = 0;
-	int cursorX = playerX - cursorRelX;
-	int cursorY = playerY - cursorRelY;
-	int cursorZ = playerZ - cursorRelZ;
+	int cursorRelX = 2;
+	int cursorRelY = 2;
+	int cursorRelZ = 2;
+	int cursorX = playerX + cursorRelX;
+	int cursorY = playerY + cursorRelY;
+	int cursorZ = playerZ + cursorRelZ;
 	char cursor = 'X';
 
 	// Drawing blocks into level array
@@ -87,6 +87,9 @@ int game(){
 		}
 
 		if(cursorX >=0 && cursorX < screenHeight && cursorZ >= 0 && cursorZ < screenWidth){
+			cursorX = playerX + cursorRelX;
+			cursorY = playerY + cursorRelY;
+			cursorZ = playerZ + cursorRelZ;
 			screen[cursorZ][cursorX] = cursor;
 		}
 	
@@ -121,6 +124,10 @@ int game(){
 			cursorRelX--;
 		} else if(in == "l"){
 			cursorRelZ++;
+		} else if(in == "ce"){
+			cursorRelY++;
+		} else if(in == "cq"){
+			cursolRelY--;
 		}
 	}
 
