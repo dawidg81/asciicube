@@ -29,9 +29,13 @@ int game(){
 	int playerZ = levelZ / 2;
 	char player = '@';
 
-	int cursorX = playerX;
-	int cursorY = playerY;
-	int cursorZ = playerZ;
+
+	int cursorRelX = 0;
+	int cursorRelY = 0;
+	int cursorRelZ = 0;
+	int cursorX = playerX - cursorRelX;
+	int cursorY = playerY - cursorRelY;
+	int cursorZ = playerZ - cursorRelZ;
 	char cursor = 'X';
 
 	// Drawing blocks into level array
@@ -56,24 +60,28 @@ int game(){
 		}
 	}
 
-	// Level projection. Camera is looking from up
-	for(int x = 0; x < levelX && x < screenHeight; x++){
-		for(int z = 0; z < levelZ && z < screenWidth; z++){
-			for(int y = levelY - 1; y >= 0; y--){
-				int block = levelArray[x][y][z];
 
-				if(block != 0){
-					screen[z][x] = blocks[block];
-					break;
-				}
-			}
-		}
-	}
 
 	// Drawing onto the screen
 	while(inGame){
 		system("clear");
 
+		// Level
+		for(int x = 0; x < levelX && x < screenHeight; x++){
+			for(int z = 0; z < levelZ && z < screenWidth; z++){
+				for(int y = levelY - 1; y >= 0; y--){
+					int block = levelArray[x][y][z];
+
+					if(block != 0){
+						screen[z][x] = blocks[block];
+						break;
+					}
+				}
+			}
+		}
+
+
+		// Player and cursor
 		if(playerX >= 0 && playerX < screenHeight && playerZ >= 0 && playerZ < screenWidth){
 			screen[playerZ][playerX] = player;
 		}
@@ -106,13 +114,13 @@ int game(){
 			inGame = false;
 		// cursor
 		} else if(in == "h"){
-			cursorZ--;
+			cursorRelZ--;
 		} else if(in == "j"){
-			cursorX++;
+			cursorRelX++;
 		} else if(in == "k"){
-			cursorX--;
+			cursorRelX--;
 		} else if(in == "l"){
-			cursorZ++;
+			cursorRelZ++;
 		}
 	}
 
