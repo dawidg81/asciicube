@@ -41,6 +41,26 @@ are building this on Windows, the executable should
 have `.exe` contained at the end of the output file
 name.
 
+ (Information on binaries already included in
+ the repository tree OR in repository releases):
+     `asciicube` - an executable compiled for
+                   Windows, by MinGW g++ compiler,
+		   for x86_64 architecture.
+		   No libraries.
+     `asciicube-android`
+                 - an executable compiled for
+		   Android/Linux/other POSIX
+		   based system, on Termux,
+		   by g++ compiler from
+		   GNU Compiler Collection,
+		   for aarch64 architecture.
+		   No libraries.
+
+     Choose one of already compiler binaries that
+     meet your system requirements or build
+     asciicube for your processor architecture
+     and system.
+
 		===================
 
 ################# Run! #################
