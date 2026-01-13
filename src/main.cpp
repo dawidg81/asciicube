@@ -70,18 +70,38 @@ int game(){
 		}
 	}
 
-	if(playerX >= 0 && playerX < screenHeight && playerZ >= 0 && playerZ < screenWidth){
-		screen[playerZ][playerX] = player;
-	}
-
 	// Drawing onto the screen
 	while(inGame){
 		system("clear");
+		if(playerX >= 0 && playerX < screenHeight && playerZ >= 0 && playerZ < screenWidth){
+			screen[playerZ][playerX] = player;
+		}
+
+		if(cursorX >=0 && cursorX < screenHeight && cursorZ >= 0 && cursorZ < screenWidth){
+			screen[cursorZ][cursorX] = cursor;
+		}
+	
 		for(int y = 0; y  < screenHeight; y++){
 			for(int x = 0; x < screenWidth; x++){
 				putchar(screen[x][y]);
 			}
 			putchar('\n');
+		}
+
+		char in;
+		cout << "Input: ";
+		cin >> in;
+		
+		if(in == 'W' || in == 'w'){
+			playerX--;
+		} else if(in == 'S' || in == 's'){
+			playerX++;
+		} else if(in == 'A' || in == 'a'){
+			playerZ--;
+		} else if(in == 'D' || in == 'd'){
+			playerZ++;
+		} else if(in == 'q'){
+			inGame = false;
 		}
 	}
 
@@ -99,7 +119,7 @@ int main(){
 
 		if(input == "help"){
 			cout << "Hello, this is help. I will give you commands.\n\n"
-				"play - starts the game"
+				"play - starts the game\n"
 				"help - shows list of commands and shortly describes them.\n"
 				"about - Shows more information about this program.\n"
 				"quit - gracefully quits the program. (Alias: exit)\n\n";
