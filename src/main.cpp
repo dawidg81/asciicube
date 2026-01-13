@@ -106,13 +106,13 @@ int game(){
 			inGame = false;
 		// cursor
 		} else if(in == "h"){
-			cursorX--;
+			cursorZ--;
 		} else if(in == "j"){
 			cursorX++;
 		} else if(in == "k"){
-			playerZ--;
+			cursorX--;
 		} else if(in == "l"){
-			playerZ++;
+			cursorZ++;
 		}
 	}
 
