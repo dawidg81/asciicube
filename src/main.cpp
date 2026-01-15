@@ -129,6 +129,26 @@ int game(){
 		} else if(in == "cq"){
 			cursorRelY--;
 		}
+		// other
+		else if(in == "?"){
+			cout << "In-game help:\n"
+				"w - move player forward\n"
+				"s - move player backward\n"
+				"a - move player left\n"
+				"d - move player right\n"
+				"\n"
+				"h - move cursor left\n"
+				"j - move cursor down\n"
+				"k - move cursor up\n"
+				"l - move cursor right\n"
+				"ce - move cursor up in depth\n"
+				"cq - move cursor down in depth\n"
+				"\n"
+				"? - shows this help\n"
+				"q - quits the game and returns to the main menu\n";
+		} else {
+			cout << "'" << in << "' is unknown.\n";
+		}
 	}
 
 	return 0;
@@ -148,7 +168,8 @@ int main(){
 				"play - starts the game\n"
 				"help - shows list of commands and shortly describes them.\n"
 				"about - Shows more information about this program.\n"
-				"quit - gracefully quits the program. (Alias: exit)\n\n";
+				"quit - gracefully quits the program. (Alias: exit)\n"
+				"Type '?' while in game to get help about in-game keybindings.\n\n";
 		} else if(input == "about"){
 			cout << "This is AsciiCube v0.0.0 made in Poland by dawidg81 on 2025-12-07 (YYYY-MM-DD).\n"
 				<< "Inspiration from ClassiCube.\n\n"
