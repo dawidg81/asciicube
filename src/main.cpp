@@ -156,7 +156,7 @@ int game(){
 
 int main(){
 	cout << "Welcome to AsciiCube.\n"
-		<< "Type 'help' or read README.txt file (should be included with the installation) for more information.\n\n";
+		<< "Type 'help' and/or read README.txt file (should be included with the installation) for more information.\n\n";
 
 	while(true){
 		string input;
