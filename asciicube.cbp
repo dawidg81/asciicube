@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="README.md" />
+		<Unit filename="docs/docs/index.md" />
+		<Unit filename="docs/mkdocs.yml" />
 		<Unit filename="game/main.cpp" />
 		<Extensions>
 			<DoxyBlocks>

@@ -4,6 +4,38 @@ A Minecraft Classic/ClassiCube clone written from scratch in C++, reimplemented 
 
 ## Build
 
-To build **asciicube** from source, open the 'asciicube.cbp' file with Code::Blocks, then go to "Build > Build" or to immidiately run asciicube after building go to "Build > Build and run".
+To build *asciicube* from source, open the 'asciicube.cbp' file with Code::Blocks, then go to "Build > Build" or to immidiately run asciicube after building go to "Build > Build and run".
 There may be dangling precompiled object files in the 'Debug' and 'Release' directories, could be built for other system or architecture, so better if you go to "Build > Clean" before building
 or do "Build > Rebuild".
+
+## About
+
+*asciicube* has been made as a clone to ClassiCube (which reimplemented Minecraft Classic), aiming to reimplement all basic things and functionalities that make this game playable as a voxel block
+game.
+
+Made by [dawidg81](https://github.com/dawidg81) in Poland. 2026-01-16 (YYYY-MM-DD)
+
+[Repository of asciicube can be found on GitHub.](https://github.com/dawidg81/asciicube)
+
+# Documentation
+
+This documentation has been made to documentate both the code and usage of the built program. The documentation is being written manually. Whole source should be documented and described.
+If not, that may be fixed. Documentation is also included in the source code of asciicube. It has been built using MkDocs documentation engine. So far the documentation is not being hosted
+anywhere in The Internet directly as the MkDocs HTTP server. Both Markdown files (which are source of the documentation) and static files (existing due to documentation generation/compilation
+using MkDocs) are being stored, located and updated almost each commit and game test, in the repository along with the asciicube's source code.
+
+## How to...
+
+### Use
+
+To open the documentation you can open the 'index.html' file using your web browser. It is the root page of the documentation and from there you can go anywwhere in the documentation. That 'index.html'
+file is one of the static html files compiled using MkDocs. 'index.html' file should be located in 'docs/site/' directory from the repository root. That being said, we are assuming that the repository
+is being stored in the system locally.
+
+Another way to access the documentation is to launch a HTTP server serving the documentation website. That function is being included along with MkDocs installation. In the 'docs' directory, which is
+the root of documentation website, run this command:
+```
+mkdocs serve
+```
+Running the command results in launching a HTTP server most commonly bound to IP address `127.0.0.1` and port `8000`, unless Wi-Fi router our host is connected to has that port open to public network,
+then the server will be also available at host's public IP address.

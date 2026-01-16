@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>asciicube 0.1.0</title>
+        <title>asciicube</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/fontawesome.min.css" rel="stylesheet">
         <link href="css/brands.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">asciicube 0.1.0</a>
+                <a class="navbar-brand" href=".">asciicube</a>
 
                 <!-- Expanded navigation -->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
@@ -55,11 +55,23 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#asciicube" class="nav-link">asciicube</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#build" class="nav-link">Build</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#about" class="nav-link">About</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#build" class="nav-link">Build</a>
+            <li class="nav-item" data-bs-level="1"><a href="#documentation" class="nav-link">Documentation</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#how-to" class="nav-link">How to...</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -69,10 +81,31 @@
 
 <h1 id="asciicube">asciicube</h1>
 <p>A Minecraft Classic/ClassiCube clone written from scratch in C++, reimplemented for terminal screen. <strong>Welcome to its documentation.</strong></p>
-<h1 id="build">Build</h1>
-<p>To build <strong>asciicube</strong> from source, open the 'asciicube.cbp' file with Code::Blocks, then go to "Build &gt; Build" or to immidiately run asciicube after building go to "Build &gt; Build and run".
+<h2 id="build">Build</h2>
+<p>To build <em>asciicube</em> from source, open the 'asciicube.cbp' file with Code::Blocks, then go to "Build &gt; Build" or to immidiately run asciicube after building go to "Build &gt; Build and run".
 There may be dangling precompiled object files in the 'Debug' and 'Release' directories, could be built for other system or architecture, so better if you go to "Build &gt; Clean" before building
-or do "Build &gt; Rebuild".</p></div>
+or do "Build &gt; Rebuild".</p>
+<h2 id="about">About</h2>
+<p><em>asciicube</em> has been made as a clone to ClassiCube (which reimplemented Minecraft Classic), aiming to reimplement all basic things and functionalities that make this game playable as a voxel block
+game.</p>
+<p>Made by <a href="https://github.com/dawidg81">dawidg81</a> in Poland. 2026-01-16 (YYYY-MM-DD)</p>
+<p><a href="https://github.com/dawidg81/asciicube">Repository of asciicube can be found on GitHub.</a></p>
+<h1 id="documentation">Documentation</h1>
+<p>This documentation has been made to documentate both the code and usage of the built program. The documentation is being written manually. Whole source should be documented and described.
+If not, that may be fixed. Documentation is also included in the source code of asciicube. It has been built using MkDocs documentation engine. So far the documentation is not being hosted
+anywhere in The Internet directly as the MkDocs HTTP server. Both Markdown files (which are source of the documentation) and static files (existing due to documentation generation/compilation
+using MkDocs) are being stored, located and updated almost each commit and game test, in the repository along with the asciicube's source code.</p>
+<h2 id="how-to">How to...</h2>
+<h3 id="use">Use</h3>
+<p>To open the documentation you can open the 'index.html' file using your web browser. It is the root page of the documentation and from there you can go anywwhere in the documentation. That 'index.html'
+file is one of the static html files compiled using MkDocs. 'index.html' file should be located in 'docs/site/' directory from the repository root. That being said, we are assuming that the repository
+is being stored in the system locally.</p>
+<p>Another way to access the documentation is to launch a HTTP server serving the documentation website. That function is being included along with MkDocs installation. In the 'docs' directory, which is
+the root of documentation website, run this command:</p>
+<pre><code>mkdocs serve
+</code></pre>
+<p>Running the command results in launching a HTTP server most commonly bound to IP address <code>127.0.0.1</code> and port <code>8000</code>, unless Wi-Fi router our host is connected to has that port open to public network,
+then the server will be also available at host's public IP address.</p></div>
             </div>
         </div>
 
@@ -154,5 +187,5 @@ or do "Build &gt; Rebuild".</p></div>
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-01-16 21:53:23.886049+00:00
+Build Date UTC : 2026-01-16 22:31:40.444032+00:00
 -->
