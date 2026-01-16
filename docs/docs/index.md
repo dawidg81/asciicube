@@ -1,17 +1,9 @@
-# Welcome to MkDocs
+# asciicube
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+A Minecraft Classic/ClassiCube clone written from scratch in C++, reimplemented for terminal screen. **Welcome to its documentation.**
 
-## Commands
+## Build
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+To build **asciicube** from source, open the 'asciicube.cbp' file with Code::Blocks, then go to "Build > Build" or to immidiately run asciicube after building go to "Build > Build and run".
+There may be dangling precompiled object files in the 'Debug' and 'Release' directories, could be built for other system or architecture, so better if you go to "Build > Clean" before building
+or do "Build > Rebuild".
