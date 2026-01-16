@@ -96,7 +96,7 @@ WARN_LOGFILE            = "D:\code\asciicube\doxygen\doxygen.log"
 # configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = \
-	"..\src\main.cpp" 
+	"..\game\main.cpp" 
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          =
 RECURSIVE              = NO

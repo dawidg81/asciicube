@@ -31,28 +31,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="README.txt" />
-		<Unit filename="doxygen/doxyfile" />
-		<Unit filename="doxygen/html/clipboard.js" />
-		<Unit filename="doxygen/html/cookie.js" />
-		<Unit filename="doxygen/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
-		<Unit filename="doxygen/html/doxygen.css" />
-		<Unit filename="doxygen/html/doxygen.svg" />
-		<Unit filename="doxygen/html/doxygen_crawl.html" />
-		<Unit filename="doxygen/html/dynsections.js" />
-		<Unit filename="doxygen/html/index.html" />
-		<Unit filename="doxygen/html/jquery.js" />
-		<Unit filename="doxygen/html/menu.js" />
-		<Unit filename="doxygen/html/menudata.js" />
-		<Unit filename="doxygen/html/navtree.css" />
-		<Unit filename="doxygen/html/navtree.js" />
-		<Unit filename="doxygen/html/navtreedata.js" />
-		<Unit filename="doxygen/html/navtreeindex0.js" />
-		<Unit filename="doxygen/html/search/search.css" />
-		<Unit filename="doxygen/html/search/search.js" />
-		<Unit filename="doxygen/html/search/searchdata.js" />
-		<Unit filename="doxygen/html/tabs.css" />
-		<Unit filename="src/main.cpp" />
+		<Unit filename="README.md" />
+		<Unit filename="game/main.cpp" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />
