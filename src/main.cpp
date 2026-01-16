@@ -14,6 +14,12 @@ char blocks[] = {
 	'|'  // 5 = Log
 };
 
+int clamp(int v, int min, int max) {
+    if (v < min) return min;
+    if (v > max) return max;
+    return v;
+}
+
 int game(){
 	int screenWidth = 40;
 	int screenHeight = 40;
@@ -60,8 +66,6 @@ int game(){
 		}
 	}
 
-
-
 	// Drawing onto the screen
 	while(inGame){
 		system("clear");
@@ -85,10 +89,12 @@ int game(){
 			screen[playerZ][playerX] = player;
 		}
 
+        cursorX = playerX + cursorRelX;
+        cursorY = playerY + cursorRelY;
+        cursorZ = playerZ + cursorRelZ;
+
 		if(cursorX >=0 && cursorX < screenHeight && cursorZ >= 0 && cursorZ < screenWidth){
-			cursorX = playerX + cursorRelX;
-			cursorY = playerY + cursorRelY;
-			cursorZ = playerZ + cursorRelZ;
+
 			screen[cursorZ][cursorX] = cursor;
 		}
 
@@ -106,27 +112,57 @@ int game(){
 		// player
 		if(in == "w"){
 			playerX--;
+            playerX = clamp(playerX, 0, levelX - 1);
+            playerY = clamp(playerY, 0, levelY - 1);
+            playerZ = clamp(playerZ, 0, levelZ - 1);
 		} else if(in == "s"){
 			playerX++;
+            playerX = clamp(playerX, 0, levelX - 1);
+            playerY = clamp(playerY, 0, levelY - 1);
+            playerZ = clamp(playerZ, 0, levelZ - 1);
 		} else if(in == "a"){
 			playerZ--;
+            playerX = clamp(playerX, 0, levelX - 1);
+            playerY = clamp(playerY, 0, levelY - 1);
+            playerZ = clamp(playerZ, 0, levelZ - 1);
 		} else if(in == "d"){
 			playerZ++;
+            playerX = clamp(playerX, 0, levelX - 1);
+            playerY = clamp(playerY, 0, levelY - 1);
+            playerZ = clamp(playerZ, 0, levelZ - 1);
 		} else if(in == "q"){
 			inGame = false;
 		// cursor
 		} else if(in == "h"){
 			cursorRelZ--;
+			cursorRelX = clamp(cursorRelX, -playerX, levelX - 1 - playerX);
+            cursorRelY = clamp(cursorRelY, -playerY, levelY - 1 - playerY);
+            cursorRelZ = clamp(cursorRelZ, -playerZ, levelZ - 1 - playerZ);
 		} else if(in == "j"){
 			cursorRelX++;
+			cursorRelX = clamp(cursorRelX, -playerX, levelX - 1 - playerX);
+            cursorRelY = clamp(cursorRelY, -playerY, levelY - 1 - playerY);
+            cursorRelZ = clamp(cursorRelZ, -playerZ, levelZ - 1 - playerZ);
 		} else if(in == "k"){
 			cursorRelX--;
+			cursorRelX = clamp(cursorRelX, -playerX, levelX - 1 - playerX);
+            cursorRelY = clamp(cursorRelY, -playerY, levelY - 1 - playerY);
+            cursorRelZ = clamp(cursorRelZ, -playerZ, levelZ - 1 - playerZ);
 		} else if(in == "l"){
 			cursorRelZ++;
+			cursorRelX = clamp(cursorRelX, -playerX, levelX - 1 - playerX);
+            cursorRelY = clamp(cursorRelY, -playerY, levelY - 1 - playerY);
+            cursorRelZ = clamp(cursorRelZ, -playerZ, levelZ - 1 - playerZ);
 		} else if(in == "ce"){
 			cursorRelY++;
+			cursorRelX = clamp(cursorRelX, -playerX, levelX - 1 - playerX);
+            cursorRelY = clamp(cursorRelY, -playerY, levelY - 1 - playerY);
+            cursorRelZ = clamp(cursorRelZ, -playerZ, levelZ - 1 - playerZ);
 		} else if(in == "cq"){
 			cursorRelY--;
+			cursorRelX = clamp(cursorRelX, -playerX, levelX - 1 - playerX);
+            cursorRelY = clamp(cursorRelY, -playerY, levelY - 1 - playerY);
+            cursorRelZ = clamp(cursorRelZ, -playerZ, levelZ - 1 - playerZ);
 		}
 		// other
 		else if(in == "?"){

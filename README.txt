@@ -32,8 +32,7 @@ file name in the `bin` directory. If you are building this on
 Windows, the executable should have `.exe` contained at the end
 of the output file name.
 
- (Information on binaries already included in
- the repository tree OR in repository releases):
+ (Information on pre-compiled binaries):
      `asciicube.exe` - an executable compiled for
                        Windows, by MinGW g++ compiler,
 		       for x86_64 architecture.
