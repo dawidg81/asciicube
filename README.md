@@ -10,4 +10,4 @@ or do "Build > Rebuild".
 
 # Documentation
 
-The documentation of asciicube code can be found in 'doxygen' directory. It has been automatically built with doxygen.
+For full information on asciicube visit its documentation. It is located in 'docs' directory. It could be also hosted with MkDocs documentation engine.

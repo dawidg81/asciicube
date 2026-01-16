@@ -1,7 +1,3 @@
-///
-/// main file of asciicube
-///
-
 #include <iostream>
 #include <string>
 #include <cstdlib>
