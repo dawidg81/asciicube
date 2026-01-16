@@ -52,7 +52,7 @@ int game(){
 			}
 		}
 	}
-	
+
 	// Clearing screen
 	for(int i = 0; i < screenWidth; i++){
 		for(int j = 0; j < screenHeight; j++){
@@ -80,7 +80,6 @@ int game(){
 			}
 		}
 
-
 		// Player and cursor
 		if(playerX >= 0 && playerX < screenHeight && playerZ >= 0 && playerZ < screenWidth){
 			screen[playerZ][playerX] = player;
@@ -92,7 +91,7 @@ int game(){
 			cursorZ = playerZ + cursorRelZ;
 			screen[cursorZ][cursorX] = cursor;
 		}
-	
+
 		for(int y = 0; y  < screenHeight; y++){
 			for(int x = 0; x < screenWidth; x++){
 				putchar(screen[x][y]);
@@ -103,7 +102,7 @@ int game(){
 		string in;
 		cout << "[@]> ";
 		cin >> in;
-		
+
 		// player
 		if(in == "w"){
 			playerX--;
