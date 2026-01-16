@@ -2519,13 +2519,6 @@ details[open]>summary::before {
 	font-size: 80%;
 }
 
-
-html {
---timestamp: 'Fri Jan 16 2026 15:57:14';
-}
-span.timestamp { content: ' '; }
-span.timestamp:before { content: var(--timestamp); }
-
 :root {
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-background-color);
